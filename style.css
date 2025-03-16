@@ -1,0 +1,109 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Center the form */
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+}
+
+/* Form Styling */
+#signup-form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Input Fields */
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Error Message */
+small.error {
+    color: red;
+    font-size: 12px;
+    visibility: hidden;
+}
+
+/* Button Styling */
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Error & Success Styles */
+.form-group.error input {
+    border: 1px solid red;
+}
+
+.form-group.success input {
+    border: 1px solid green;
+}
+
+.input-error {
+    border-color: red !important;
+    animation: shake 0.3s ease-in-out;
+  }
+  
+  /* Success State */
+  .input-success {
+    border-color: green !important;
+  }
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+  }
+  
+  .shake {
+    animation: shake 0.3s ease-in-out;
+  }
+  
