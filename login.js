@@ -22,7 +22,7 @@ function validateInputs() {
     // Check if email and password match stored values
     if (logEmail === getData.email && logPass === getData.password) {
         alert("Login successful! Redirecting...");
-        window.location.href = "dashboard.html"; // Redirect user
+        // window.location.href = "dashboard.html"; // Redirect user
     } else {
         alert("Invalid email or password. Try again.");
     }
