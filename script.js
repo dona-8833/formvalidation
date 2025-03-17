@@ -15,7 +15,7 @@ function validateInputs() {
     let passwordValue = password.value.trim();
     let confirmPasswordValue = confirmPassword.value.trim();
 
-    let isValid = true; // Flag to check if all inputs are valid
+    let isValid = true; 
 
     if (usernameValue === "") {
         setErrorFor(username, "Username cannot be blank");
@@ -67,7 +67,7 @@ function validateInputs() {
         localStorage.setItem("user", JSON.stringify(userData));
 
         alert("Signup successful! Redirecting to login...");
-        window.location.href = "login.html"; // Redirect only if everything is valid
+        window.location.href = "login.html"; 
     }
 }
 
@@ -76,19 +76,19 @@ function setErrorFor(input, message) {
     const errorMessage = formGroup.querySelector(".error");
 
     errorMessage.innerText = message;
-    errorMessage.style.visibility = "visible"; // Show error message
-    input.classList.add("input-error"); // Add red border + shake animation
-    input.classList.remove("input-success"); // Remove success border
+    errorMessage.style.visibility = "visible"; 
+    input.classList.add("input-error"); 
+    input.classList.remove("input-success"); 
 }
 
 function setSuccessFor(input) {
     const formGroup = input.parentElement;
     const errorMessage = formGroup.querySelector(".error");
 
-    errorMessage.innerText = ""; // Clear error message
-    errorMessage.style.visibility = "hidden"; // Hide error message
-    input.classList.remove("input-error"); // Remove error border
-    input.classList.add("input-success"); // Add green border
+    errorMessage.innerText = ""; 
+    errorMessage.style.visibility = "hidden"; 
+    input.classList.remove("input-error"); 
+    input.classList.add("input-success"); 
 }
 
 const isValidEmail = (email) => {

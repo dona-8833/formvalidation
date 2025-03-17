@@ -3,7 +3,7 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 
 form.addEventListener('submit', (e) => {
-    e.preventDefault(); // Prevent page reload
+    e.preventDefault(); 
     validateInputs();
 });
 
@@ -11,7 +11,7 @@ function validateInputs() {
     let logEmail = email.value.trim();
     let logPass = password.value.trim();
 
-    // Retrieve user data from localStorage
+    
     const getData = JSON.parse(localStorage.getItem('user'));
 
     if (!getData) {
@@ -19,7 +19,7 @@ function validateInputs() {
         return;
     }
 
-    // Check if email and password match stored values
+    
     if (logEmail === getData.email && logPass === getData.password) {
         alert("Login successful! Redirecting...");
         // window.location.href = "dashboard.html"; // Redirect user
